@@ -12,7 +12,8 @@ data "aws_ami" "ec2_instance" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.ec2_instance.id}"
+  #ami           = "${data.aws_ami.ec2_instance.id}"
+  ami = "ami-026b57f3c383c2eec"
   instance_type = "t2.micro"
 
   tags = {
